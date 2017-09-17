@@ -1,0 +1,80 @@
+CREATE TABLE Patient
+(
+    email VARCHAR(40) PRIMARY KEY,
+    firstName  VARCHAR(40),
+    lastName VARCHAR(40),
+    thePassword VARCHAR(40), 
+    dateOfBirth DATE
+);
+
+CREATE TABLE healthRecord
+(
+    id INT PRIMARY KEY,
+    email  VARCHAR(40),
+    FOREIGN KEY (email) REFERENCES Patient(email)
+);
+
+CREATE TABLE QuestionnaireResults
+(
+    id INT PRIMARY KEY, 
+    diagnosedBefore  BOOLEAN, 
+    susbtanceUser BOOLEAN,
+    familyHistoryOfMentalIllness BOOLEAN
+);
+
+CREATE TABLE healthRecord_records_QuestionnaireResults
+(
+    healthRecordID INT,
+    questionnaireResultsID  INT,
+    PRIMARY KEY (healthRecordID, questionnaireResultsID),
+    FOREIGN KEY (healthRecordID) REFERENCES healthRecord(id),
+    FOREIGN KEY (questionnaireResultsID) REFERENCES QuestionnaireResults(id)
+);
+
+CREATE TABLE Disorder
+(
+    name VARCHAR(40) PRIMARY KEY,
+    minAge INT,
+    maxAge INT
+);
+
+CREATE TABLE QuestionnaireResults_indicate_Disorder
+(
+    questionnaireResultsID  INT,
+    disorderName  VARCHAR(40),
+    PRIMARY KEY (questionnaireResultsID, disorderName),
+    FOREIGN KEY (questionnaireResultsID) REFERENCES QuestionnaireResults(id),
+    FOREIGN KEY (disorderName) REFERENCES Disorder(name)
+);
+
+CREATE TABLE Symptomp
+(
+    id INT PRIMARY KEY,
+    name VARCHAR(40) UNIQUE
+);
+
+CREATE TABLE Disorder_has_Symptomps
+(
+    disorderName VARCHAR(40),
+    symptompID  INT,
+    PRIMARY KEY(disorderName, symptmpID),
+    FOREIGN KEY (disorderName) REFERENCES Disorder(name),
+    FOREIGN KEY (symptompID) REFERENCES Symptomp(id)
+);
+
+CREATE TABLE Resource
+(
+    name VARCHAR(40) PRIMARY KEY,
+    address VARCHAR(40),
+    phoneNumber VARCHAR(40),
+    isFree BOOLEAN
+);
+
+CREATE TABLE Disorder_treatedBy_Resource
+(
+    disorderName VARCHAR(40),
+    resourceName VARCHAR(40),
+    PRIMARY KEY(disorderName, resourceName),
+    FOREIGN KEY (disorderName) REFERENCES Disorder(name),
+    FOREIGN KEY (resourceName) REFERENCES Resource(name)
+);
