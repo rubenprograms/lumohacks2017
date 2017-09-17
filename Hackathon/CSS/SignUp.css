@@ -1,0 +1,81 @@
+html, body{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	font-family: 'Handlee', cursive;
+	background-image: url("../Elements/Images/Background2.jpg");
+	background-size:cover;
+	
+}
+a:visited, a:active, a:hover, a:link {
+	color: black;
+}
+#container{
+	background-image: url("../Elements/Images/Background2.jpg");
+	background-size:cover;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#Name {
+	color: white;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 70px;
+	display: block;
+}
+#myForm{
+	width: 35%;
+	margin-top: 3em;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 3em;
+}
+label {
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+@media only screen and (max-width: 900px){
+	#myForm{
+	width: 55%;
+
+}
+}

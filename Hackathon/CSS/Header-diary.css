@@ -1,0 +1,137 @@
+header{
+	font-family: Calibri;
+	z-index: 999;
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	font-family: 'Handlee', cursive;
+}
+.Header-background{
+	background: rgba(36, 76, 140, 1);
+}
+
+a, h1, ul, il{
+	 margin: 0; 
+}
+a {
+	-webkit-transition: color 0.3s; /* Safari */
+    transition: color 0.3s;
+	border-radius: 15px;
+}
+a:hover {
+	color: grey;
+}
+header ul{
+	z-index: 1000;
+}
+header a {
+	font-size: 18px;
+	color: #ffffff;
+	text-decoration: none;
+}
+header ul {
+	list-style-type: none;
+}
+.Hidden-menu{
+	display: none;
+}
+.Logo, .Logo2 {
+	display: inline-block;
+	width: 195px;
+	height: 100%;
+	margin-top: 0.8em;
+	margin-left: -2em;
+}
+.Logo h1, .Logo2 h1 {
+	text-align: center;
+	margin: auto auto;
+	font-size: 40px;
+	font-weight: 500;
+}
+.Nav-list{
+	display: flex;
+	flex-flow: row;
+	white-space: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 3em;
+}
+.Nav-list > li {
+	position: relative;
+}
+il:hover{
+	background-color: white;
+}
+.Nav-list>li:not(.has-logo)>a{
+		text-transform: uppercase;
+		display: block;
+		padding: 1rem;
+}
+.Mobile-display {
+	display: none;
+}
+#Content{
+	width: 100%;
+	height: 80%;
+	z-index: 1;
+	background-color: black;
+}
+@media only screen and (max-width: 60rem){
+	html{
+		font-size: 15px;
+	}
+	.Logo h1, .Logo2 h1 {
+		
+		font-size: 30px;
+}
+	header{
+		padding: 5px 0 0 0;
+		background: rgba(10, 90, 150, 1);
+	}
+	#Main-logo{
+		display: none;
+	}
+	.Mobile-display{
+		display: block;
+		margin: auto auto;
+		text-align: center;
+	}
+	nav{
+		margin-top: -2em;
+	}
+}
+@media only screen and (max-width: 60rem){
+	.Hidden-menu{
+		display: block;
+		max-width: 50px;
+		float: right;
+		margin-top: -2.5rem;
+		margin-right: 1em;
+		color: white !important;
+		background-color: rgba(0,0,0,0);
+		border-radius: 50%;
+		padding: 0.5em;
+		padding-top: 0.2em;
+	}
+	.Nav-list{
+		position: static;
+		display: block;
+		width: 100%;
+		z-index: 10000;
+		max-height: 0;
+		text-align: center;
+		overflow: hidden;
+		background: rgba(36, 76, 140, 1);
+		padding: 0;
+		margin: 0;
+	}
+	.active {
+		max-height: 100%;
+		overflow: auto;
+	}
+	.Mobile-display{
+		display: block;
+		margin-left: 1rem;
+		text-align: left;
+	}
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UpLift-Diary</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	<!-- Style links -->
+	<link rel="Stylesheet" href="CSS/Diary.css" />
+	<link rel="Stylesheet" href="CSS/Header-diary.css" />
+	<link rel="Stylesheet" href="CSS/reset.css" />
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+	<script src="JavaScript/Progress.js"></script>
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+	<header class="Header Header-background">
+			<div class="Mobile-display" >
+				<a href="#">
+					<div class="Logo2">
+						<h1>UpLift</h1>
+					</div>
+			</a>
+		</div>
+		<nav class="Override">
+		<!--Menu button-->
+			<a href="#" class="Hidden-menu">&#9776;</a>
+			<!--Menu unordered list-->
+			<ul class="Nav-list Open-nav" id="Nav">
+			<a href="#" id="Main-logo">
+				<div class="Logo">
+					<h1>UpLift</h1>
+				</div>
+				</a>
+				<li><a href="Home.html" class="hvr-underline-reveal">Home</a></li>
+				<li><a href="About us.htm" class="hvr-underline-reveal">Engage</a></li>
+				<li><a href="Learn.html" class="hvr-underline-reveal">Learn</a></li>
+				<li><a href="Progress.html" class="hvr-underline-reveal">Progress</a></li>
+				<li><a href="Test.html" class="hvr-underline-reveal">Test</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="background-overlay"></div>
+	<div id="container-button">
+		<button id="start" onclick="getTime()"><h1>Start</h1></button>
+		<button id="end" onclick="getTimeEnd()"><h1>End</h1></button>
+		<h1 id="time-start">StartTime</h1>
+		<h1 id="time-end">EndTime</h1>
+	</div>
+</div>
+</body>
+<script src="Javascript/Javascript.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+	var NavMenu = "#Nav", openNav = "active";
+	$(".Hidden-menu").click(function(x){
+			if ($(NavMenu).hasClass(openNav)){
+				$(NavMenu).removeClass(openNav);
+			}
+			else {
+				$(NavMenu).addClass(openNav);
+			}
+			x.preventDefault();
+		})
+		});
+		
+function getTime(){
+	var myTime =[];
+	var newTime = "";
+	var Time = new Date();
+	myTime.push(Time.getHours() + ':');
+	myTime.push(Time.getMinutes()	+ ':');
+	myTime.push(Time.getSeconds());
+	
+	newTime = myTime.join('');
+	document.getElementById("time-start").innerHTML = newTime;
+}	
+function getTimeEnd(){
+	var myTime =[];
+	var newTime = "";
+	var Time = new Date();
+	myTime.push(Time.getHours() + ':');
+	myTime.push(Time.getMinutes()	+ ':');
+	myTime.push(Time.getSeconds());
+	
+	newTime = myTime.join('');
+	document.getElementById("time-end").innerHTML = newTime;
+	
+}	
+</script>
+</html>

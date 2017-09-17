@@ -78,3 +78,11 @@ CREATE TABLE Disorder_treatedBy_Resource
     FOREIGN KEY (disorderName) REFERENCES Disorder(name),
     FOREIGN KEY (resourceName) REFERENCES Resource(name)
 );
+
+CREATE TABLE Patient_has_Symptomps
+(
+    patientsEmail VARCHAR(40),
+    symptompID  INT,
+    FOREIGN KEY (patientsEmail) REFERENCES Patient(email),
+    FOREIGN KEY (symptompID) REFERENCES Symptomp(id)
+);

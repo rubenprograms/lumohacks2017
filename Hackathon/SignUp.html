@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UpLift-Sign Up</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	<!-- Style links -->
+	<link rel="Stylesheet" href="CSS/SignUp.css" />
+	<link rel="Stylesheet" href="CSS/reset.css" />
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+</head>
+<body>
+<div id="container">
+	<a href="index.html" id="Name">UpLift</a>
+
+<form method="POST" action="../Back-end/PHP/signUp.php" id="myForm"> 
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+	
+	<label for="lname">Email</label>
+    <input type="text" id="email" name="email" placeholder="Email" required>
+	
+	<label for="lname">Password</label>
+    <input type="text" id="password" name="password" placeholder="Password" required>
+	
+    <label for="country">Gender</label>
+    <select id="country" name="country" required>
+      <option value="australia">Male</option>
+      <option value="canada">Female</option>
+      <option value="usa">Other</option>
+    </select>
+  
+	<label for="lname">Birthday</label>
+	<input type="date" name="bday" required>
+  
+    <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

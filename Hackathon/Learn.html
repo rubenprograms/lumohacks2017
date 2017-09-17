@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UpLift-Learn</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	<!-- Style links -->
+	<link rel="Stylesheet" href="CSS/Learn.css" />
+	<link rel="Stylesheet" href="CSS/Header-diary.css" />
+	<link rel="Stylesheet" href="CSS/reset.css" />
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+	<script src="JavaScript/Progress.js"></script>
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+	<header class="Header Header-background">
+			<div class="Mobile-display" >
+				<a href="#">
+					<div class="Logo2">
+						<h1>UpLift</h1>
+					</div>
+			</a>
+		</div>
+		<nav class="Override">
+		<!--Menu button-->
+			<a href="#" class="Hidden-menu">&#9776;</a>
+			<!--Menu unordered list-->
+			<ul class="Nav-list Open-nav" id="Nav">
+			<a href="#" id="Main-logo">
+				<div class="Logo">
+					<h1>UpLift</h1>
+				</div>
+				</a>
+				<li><a href="Home.html" class="hvr-underline-reveal">Home</a></li>
+				<li><a href="About us.htm" class="hvr-underline-reveal">Engage</a></li>
+				<li><a href="Help.html" class="hvr-underline-reveal">Help</a></li>
+				<li><a href="Progress.html" class="hvr-underline-reveal">Progress</a></li>
+				<li><a href="Diary.html" class="hvr-underline-reveal">Diary</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="Despression">
+	<h1>The symptoms of Depression</h1>
+	<ul>
+    <li>Feelings of sadness, tearfulness, emptiness or hopelessness</li>
+    <li>Angry outbursts, irritability or frustration</li>
+    <li>Loss of interest or pleasure in most or all normal activities</li>
+    <li>Sleep disturbances, including insomnia or sleeping too much</li>
+    <li>Tiredness and lack of energy</li>
+    <li>Reduced appetite and weight loss OR increased cravings for food and weight gain</li>
+    <li>Anxiety, agitation or restlessness</li>
+    <li>Slowed thinking, speaking or body movements</li>
+    <li>Feelings of worthlessness/guilt/self-blame</li>
+    <li>Trouble thinking/concentrating/making decisions/remembering things</li>
+    <li>Suicidal thoughts</li>
+    <li>Unexplained physical problems, such as back pain or headaches</li>
+    <li>Suicidal thoughts</li>
+    <li>Use of recreational drugs</li>
+  </ul>
+  </br>
+ <h3>Services in BC</h3>
+ </br>
+<ul>
+    <li>Crisis Lines Association of British Columbia by calling 310-6789</li>
+    <li>For Kids and teens: call the Kids Help Phone to speak to a counsellor at 1-800-668-6868 </li>
+    <li>For suicide: Crisis Lines across British Columbia by calling the Crisis Line Association of British Columbia at 1-800-784-2433</li>
+    
+  </ul>
+ 
+	</div>
+</div>
+</body>
+<script src="Javascript/Javascript.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+	var NavMenu = "#Nav", openNav = "active";
+	$(".Hidden-menu").click(function(x){
+			if ($(NavMenu).hasClass(openNav)){
+				$(NavMenu).removeClass(openNav);
+			}
+			else {
+				$(NavMenu).addClass(openNav);
+			}
+			x.preventDefault();
+		})
+		});
+</script>
+</html>

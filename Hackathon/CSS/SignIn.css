@@ -1,0 +1,97 @@
+html, body, #container{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Handlee', cursive;
+	background-image: url("../Elements/Images/Background2.jpg");
+	background-size:cover;
+}
+a:visited, a:active, a:hover, a:link {
+	color: white;
+}
+#container {
+	background-image: url("../Elements/Images/Background2.jpg");
+	background-size:cover;
+	height: 100%;
+}
+#Name {
+	color: white;
+	margin: auto auto;
+	font-size: 70px;
+	padding-top: 1em;
+	display: block;
+	text-align: center;
+}
+#myForm{
+	width: 50%;
+	margin-top: 5em;
+	margin-right: auto;
+	margin-left: auto;
+}
+label {
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+h3 {
+	text-align: center;
+	color: white;
+}
+#service-button{
+	margin: 1em 2em 1em 2em;
+	font-size: 15px;
+	color: white;
+	border: solid 0.2em;
+	padding: 0.2em 1em 0.2em 1em;
+	border-radius: 20px;
+	margin: 0;
+	text-align: center;
+	margin: auto auto;
+	display: block;
+	line-height: 3em;
+	width: 15em;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 2em;
+	
+}
+#service-button:hover{
+	color: black;
+	background-color: white;
+	-webkit-transition: background-color .2s ease-in-out;
+   transition: background-color .2s ease-in-out;
+   border-color: white;
+}
+#something {
+	width: 100%;
+}
